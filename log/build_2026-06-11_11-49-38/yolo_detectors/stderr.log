@@ -1,3 +1,0 @@
-/home/charlottediloreto/projet_yolo26/env_orbbec/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
-  warnings.warn(msg)
-listing git files failed - pretending there aren't any
