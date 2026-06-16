@@ -1,0 +1,42 @@
+[0.422s] Invoking command in '/home/charlottediloreto/ros2_orbbec_ws/src/yolo_detectors': PS1=(env_orbbec) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages: VIRTUAL_ENV_PROMPT=(env_orbbec) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_detectors build --build-base /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build install --record /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/install.log --single-version-externally-managed install_data
+[0.593s] running egg_info
+[0.594s] creating ../../build/yolo_detectors/yolo_detectors.egg-info
+[0.594s] writing ../../build/yolo_detectors/yolo_detectors.egg-info/PKG-INFO
+[0.594s] writing dependency_links to ../../build/yolo_detectors/yolo_detectors.egg-info/dependency_links.txt
+[0.594s] writing entry points to ../../build/yolo_detectors/yolo_detectors.egg-info/entry_points.txt
+[0.595s] writing requirements to ../../build/yolo_detectors/yolo_detectors.egg-info/requires.txt
+[0.595s] writing top-level names to ../../build/yolo_detectors/yolo_detectors.egg-info/top_level.txt
+[0.595s] writing manifest file '../../build/yolo_detectors/yolo_detectors.egg-info/SOURCES.txt'
+[0.611s] listing git files failed - pretending there aren't any
+[0.692s] reading manifest file '../../build/yolo_detectors/yolo_detectors.egg-info/SOURCES.txt'
+[0.692s] writing manifest file '../../build/yolo_detectors/yolo_detectors.egg-info/SOURCES.txt'
+[0.693s] running build
+[0.693s] running build_py
+[0.693s] creating /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build
+[0.693s] creating /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib
+[0.693s] creating /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.693s] copying yolo_detectors/__init__.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.694s] copying yolo_detectors/alien_detection_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.694s] copying yolo_detectors/pose_detection_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.694s] running install
+[0.694s] running install_lib
+[0.695s] creating /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors
+[0.695s] copying /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors/__init__.py -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors
+[0.695s] copying /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors/alien_detection_node.py -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors
+[0.695s] copying /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors/pose_detection_node.py -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors
+[0.695s] byte-compiling /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors/__init__.py to __init__.cpython-310.pyc
+[0.695s] byte-compiling /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors/alien_detection_node.py to alien_detection_node.cpython-310.pyc
+[0.698s] byte-compiling /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors/pose_detection_node.py to pose_detection_node.cpython-310.pyc
+[0.699s] running install_data
+[0.699s] creating /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/ament_index
+[0.700s] creating /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/ament_index/resource_index
+[0.700s] creating /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/ament_index/resource_index/packages
+[0.700s] copying resource/yolo_detectors -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/ament_index/resource_index/packages
+[0.700s] copying package.xml -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/yolo_detectors
+[0.700s] running install_egg_info
+[0.700s] Copying ../../build/yolo_detectors/yolo_detectors.egg-info to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors-0.1.0-py3.10.egg-info
+[0.701s] running install_scripts
+[0.714s] Installing alien_detection script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[0.714s] Installing pose_detection script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[0.714s] writing list of installed files to '/home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/install.log'
+[0.731s] Invoked command in '/home/charlottediloreto/ros2_orbbec_ws/src/yolo_detectors' returned '0': PS1=(env_orbbec) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages: VIRTUAL_ENV_PROMPT=(env_orbbec) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_detectors build --build-base /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build install --record /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/install.log --single-version-externally-managed install_data

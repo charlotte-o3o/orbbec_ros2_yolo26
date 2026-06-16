@@ -1,0 +1,74 @@
+[0.562s] Invoking command in '/home/charlottediloreto/ros2_orbbec_ws/src/yolo_detectors': PS1=(env_orbbec) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(env_orbbec) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_detectors build --build-base /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build install --record /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/install.log --install-scripts $base/lib/yolo_detectors --single-version-externally-managed install_data
+[0.676s] /home/charlottediloreto/projet_yolo26/env_orbbec/lib/python3.10/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'script-dir' in 'develop' (setup.cfg), please use the underscore name 'script_dir' instead.
+[0.676s] !!
+[0.676s] 
+[0.676s]         ********************************************************************************
+[0.676s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.676s]         versions. Please use the underscore name 'script_dir' instead.
+[0.676s] 
+[0.676s] 
+[0.676s]         Available configuration options are listed in:
+[0.676s]         https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
+[0.676s] 
+[0.676s]         This deprecation is overdue, please update your project and remove deprecated
+[0.677s]         calls to avoid build errors in the future.
+[0.677s] 
+[0.677s]         See https://github.com/pypa/setuptools/discussions/5011 for details.
+[0.677s]         ********************************************************************************
+[0.677s] 
+[0.677s] !!
+[0.677s]   opt = self._enforce_underscore(opt, section)
+[0.727s] /home/charlottediloreto/projet_yolo26/env_orbbec/lib/python3.10/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'script-dir' in 'develop' (setup.cfg), please use the underscore name 'script_dir' instead.
+[0.727s] !!
+[0.727s] 
+[0.727s]         ********************************************************************************
+[0.727s]         Usage of dash-separated 'script-dir' will not be supported in future
+[0.727s]         versions. Please use the underscore name 'script_dir' instead.
+[0.727s]         (Affected: yolo_detectors).
+[0.728s] 
+[0.728s]         Available configuration options are listed in:
+[0.728s]         https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
+[0.728s] 
+[0.728s]         This deprecation is overdue, please update your project and remove deprecated
+[0.728s]         calls to avoid build errors in the future.
+[0.728s] 
+[0.728s]         See https://github.com/pypa/setuptools/discussions/5011 for details.
+[0.728s]         ********************************************************************************
+[0.728s] 
+[0.728s] !!
+[0.728s]   opt = self._enforce_underscore(opt, section)
+[0.797s] running egg_info
+[0.815s] writing ../../build/yolo_detectors/yolo_detectors.egg-info/PKG-INFO
+[0.815s] writing dependency_links to ../../build/yolo_detectors/yolo_detectors.egg-info/dependency_links.txt
+[0.815s] writing entry points to ../../build/yolo_detectors/yolo_detectors.egg-info/entry_points.txt
+[0.815s] writing requirements to ../../build/yolo_detectors/yolo_detectors.egg-info/requires.txt
+[0.815s] writing top-level names to ../../build/yolo_detectors/yolo_detectors.egg-info/top_level.txt
+[0.870s] listing git files failed - pretending there aren't any
+[0.952s] reading manifest file '../../build/yolo_detectors/yolo_detectors.egg-info/SOURCES.txt'
+[0.953s] writing manifest file '../../build/yolo_detectors/yolo_detectors.egg-info/SOURCES.txt'
+[0.953s] running build
+[0.953s] running build_py
+[0.954s] copying yolo_detectors/camera_driver_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.954s] copying yolo_detectors/__init__.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.954s] copying yolo_detectors/pose_yolo_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.954s] copying yolo_detectors/alien_detection_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.954s] copying yolo_detectors/pose_detection_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.954s] copying yolo_detectors/alien_yolo_node.py -> /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors
+[0.954s] running install
+[0.958s] running install_lib
+[0.975s] copying /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build/lib/yolo_detectors/camera_driver_node.py -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors
+[0.975s] byte-compiling /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors/camera_driver_node.py to camera_driver_node.cpython-310.pyc
+[0.976s] running install_data
+[0.976s] copying resource/yolo_detectors -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/ament_index/resource_index/packages
+[0.977s] copying package.xml -> /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/share/yolo_detectors
+[0.977s] running install_egg_info
+[0.993s] removing '/home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors-0.1.0-py3.10.egg-info' (and everything under it)
+[0.993s] Copying ../../build/yolo_detectors/yolo_detectors.egg-info to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages/yolo_detectors-0.1.0-py3.10.egg-info
+[0.994s] running install_scripts
+[1.027s] Installing alien_detection script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[1.027s] Installing alien_yolo script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[1.028s] Installing camera_driver script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[1.028s] Installing pose_detection script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[1.028s] Installing pose_yolo script to /home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/yolo_detectors
+[1.029s] writing list of installed files to '/home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/install.log'
+[1.044s] Invoked command in '/home/charlottediloreto/ros2_orbbec_ws/src/yolo_detectors' returned '0': PS1=(env_orbbec) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/charlottediloreto/ros2_orbbec_ws/install/yolo_detectors/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(env_orbbec) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/yolo_detectors build --build-base /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/build install --record /home/charlottediloreto/ros2_orbbec_ws/build/yolo_detectors/install.log --install-scripts $base/lib/yolo_detectors --single-version-externally-managed install_data
