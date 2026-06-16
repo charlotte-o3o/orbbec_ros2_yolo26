@@ -44,9 +44,9 @@ You will need **two open terminals**.
    ```
 5. Launch the desired node:
    ```bash
-   ros2 run <package_name> yolo_pose_node
+   ros2 run yolo_detectors yolo_pose_node
    # or
-   ros2 run <package_name> fine_tune_yolo_node
+   ros2 run yolo_detectors fine_tune_yolo_node
    ```
 
 ### Environment variables
