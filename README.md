@@ -5,7 +5,7 @@ ROS 2 nodes for running YOLO pose estimation and a fine-tuned YOLO detector on s
 ## Nodes
 
 - **`yolo_pose_node`** — runs YOLO pose estimation on the color stream, overlays skeleton keypoints, and computes the distance to each detected person (from shoulder midpoint) using the synchronized depth image.
-- **`fine_tune_yolo_node`** — runs a custom fine-tuned YOLO model (e.g. `alien_plushie_v3.pt`), draws bounding boxes with class/confidence, and computes a smoothed distance estimate per detection using a filtered depth patch.
+- **`fine_tune_yolo_node`** — runs a custom fine-tuned YOLO model (e.g. `alien_plushie_v3.pt`), draws bounding boxes with class/confidence, and computes a smoothed distance estimate per detection using a filtered depth patch. The model used is a custom model fine-tuned by myself, available in the [`weights/`](./weights) folder.
 
 Both nodes subscribe to:
 - `/orbbec_external/color/image_raw`
