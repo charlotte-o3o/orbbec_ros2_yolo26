@@ -1,3 +1,9 @@
+import os
+import warnings
+
+warnings.filterwarnings("ignore", category=UserWarning, message="Unable to import Axes3D")
+os.environ["QT_LOGGING_RULES"] = "qt.qpa.fonts.warning=false;*.warning=false"
+
 from rclpy.node import Node
 import message_filters
 from sensor_msgs.msg import Image
@@ -8,6 +14,7 @@ from ultralytics import YOLO
 import message_filters
 import random
 import numpy as np
+import time
 
 class TestYoloNode(Node):
 
@@ -63,8 +70,13 @@ class TestYoloNode(Node):
             cv_color_image = self.bridge.imgmsg_to_cv2(color_msg, desired_encoding='bgr8')
             cv_depth_image = self.bridge.imgmsg_to_cv2(depth_msg, desired_encoding='passthrough')
 
-            results = self.model(cv_color_image, stream=True, verbose=False, conf=self.confidence_threshold)
+            start_time = time.perf_counter()
+            results = self.model(cv_color_image, stream=True, verbose=False, conf=self.confidence_threshold)           
             results = list(results)
+            end_time = time.perf_counter() 
+
+            inference_time = (end_time - start_time) * 1000
+            fps = 1000.0 / inference_time if inference_time > 0 else 0.0
 
             annotated_image = cv_color_image.copy()
             boxes = results[0].boxes
@@ -133,8 +145,17 @@ class TestYoloNode(Node):
                     cv2.putText(annotated_image, custom_label, (x1, y1-10), 
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, self.box_color, 2)
 
-            cv2.imshow("BGR Image with YOLO", annotated_image)
+            cv2.putText(
+                annotated_image, 
+                f"Inference: {inference_time:.1f} ms ({fps:.0f} FPS)", 
+                (30, 50),
+                cv2.FONT_HERSHEY_SIMPLEX, 
+                1, 
+                (0, 0, 255), 
+                2
+                )
             
+            cv2.imshow("BGR Image with YOLO", annotated_image)
 
             depth_vis = cv2.normalize(cv_depth_image, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_8U)
             depth_colormap = cv2.applyColorMap(depth_vis, cv2.COLORMAP_JET)
