@@ -14,7 +14,7 @@ class TestYoloNode(Node):
     def __init__(self):
         super().__init__('test_yolo_node')
 
-        self.declare_parameter('model_path',  'alien_plushie_v3.pt')
+        self.declare_parameter('model_path',  'weights/alien_plushie_v3.pt')
         self.declare_parameter('confidence',  0.50)
         self.declare_parameter('max_history', 5)
         self.declare_parameter('max_jump',    0.5)
