@@ -14,6 +14,7 @@ from ultralytics import YOLO
 import message_filters
 import numpy as np
 import time
+import random
 from lancer_interfaces.msg import HumanPoseArray, HumanPose, Keypoint2D
 
 class YoloPoseNode(Node):
@@ -32,6 +33,16 @@ class YoloPoseNode(Node):
         self.cx = 320.0  # Principal point x-coordinate (image center)      
         self.cy = 240.0  # Principal point y-coordinate (image center)
         self.has_camera_info = False  # Flag to check if camera info has been received
+
+        self.skeleton_connections = [
+            (0, 1), (0, 2), (1, 3), (2, 4),           # Visage (Nez, Yeux, Oreilles)
+            (3, 5), (4, 6),                           # Cou / nuque (Oreilles vers Épaules)
+            (5, 6), (5, 7), (7, 9), (6, 8), (8, 10),  # Bras (Épaules, Coudes, Poignets)
+            (5, 11), (6, 12), (11, 12),               # Tronc (Épaules vers Hanches)
+            (11, 13), (13, 15), (12, 14), (14, 16)    # Jambes (Hanches, Genoux, Chevilles)
+        ]
+        self.line_color = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
+        self.circle_color = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
 
         self.get_logger().info("*** YOLO-Pose Node Launched successfully ***")
 
@@ -103,7 +114,7 @@ class YoloPoseNode(Node):
             inference_time = (end_time - start_time) * 1000
             fps = 1000.0 / inference_time if inference_time > 0 else 0.0
 
-            annotated_image = results[0].plot(labels=False)
+            annotated_image = cv_color_image.copy()
 
             boxes = results[0].boxes
             keypoints_object = results[0].keypoints
@@ -125,6 +136,20 @@ class YoloPoseNode(Node):
                         continue
 
                     person_kpts = kpts[i]
+
+                    for pt1_idx, pt2_idx in self.skeleton_connections:
+                        x1, y1, conf1 = person_kpts[pt1_idx]
+                        x2, y2, conf2 = person_kpts[pt2_idx]
+
+                        if conf1 > 0.5 and conf2 > 0.5:
+                            start_point = (int(x1), int(y1))
+                            end_point = (int(x2), int(y2))
+                            cv2.line(annotated_image, start_point, end_point, self.line_color, 2)
+
+                    for kp in person_kpts:
+                        kp_x, kp_y, kp_conf = kp
+                        if kp_conf > 0.5:  # Seuil de confiance pour afficher le point
+                            cv2.circle(annotated_image, (int(kp_x), int(kp_y)), 4, self.circle_color, -1)
 
                     x_l_shoulder, y_l_shoulder, conf_l = person_kpts[5] # Épaule gauche
                     x_r_shoulder, y_r_shoulder, conf_r = person_kpts[6] # Épaule droite

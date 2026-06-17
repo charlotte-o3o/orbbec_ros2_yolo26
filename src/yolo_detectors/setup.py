@@ -21,6 +21,7 @@ setup(
             'test_subscriber = yolo_detectors.test_subscriber_node:main',
             'fine_tune_yolo = yolo_detectors.fine_tune_yolo_node:main',
             'yolo_pose = yolo_detectors.yolo_pose_node:main',
+            'yolo_world = yolo_detectors.yolo_world_node:main',
         ],
     },
 )

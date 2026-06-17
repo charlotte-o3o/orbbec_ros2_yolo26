@@ -10,7 +10,7 @@ from sensor_msgs.msg import CameraInfo, Image
 import rclpy
 import cv2
 from cv_bridge import CvBridge
-from ultralytics import YOLO
+from ultralytics import YOLO, YOLOWorld
 import message_filters
 import random
 import numpy as np
@@ -49,7 +49,7 @@ class FineTuneYoloNode(Node):
         self.get_logger().info(f"Model loading : {self.model_path}...")
         self.model = YOLO(self.model_path)
         self.get_logger().info("Model loaded successfully")
-
+        
 
         self.sub_info = self.create_subscription(
             CameraInfo,
