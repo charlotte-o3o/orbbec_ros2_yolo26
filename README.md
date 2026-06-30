@@ -126,20 +126,12 @@ ros2_orbbec_ws/
 │       │   ├── yolo_pose_node.py
 │       │   ├── fine_tune_yolo_node.py
 │       │   ├── lstm_node.py
-│       │   ├── inference_stgcn_node.py
-│       │   ├── mathematical_throw_detect...py
-│       │   ├── double_detection_node.py
-│       │   ├── collect_data_node.py
-│       │   ├── test_subscriber_node.py
-│       │   └── yolo_world_node.py
 │       ├── config/
 │       ├── resource/
 │       └── test/
 ├── weights/                      # Model weights
 │   ├── yolo26n-pose.pt
 │   ├── alien_plushie_v4.pt
-│   ├── stgcn_lancer.pt
-│   ├── yolov8s-world.pt
 │   └── throw_lstm_v7.pth
 ├── requirements.txt
 ├── setup_env.sh
